@@ -19,6 +19,8 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+
 // ---------- Scroll Animations (Intersection Observer) ----------
 const fadeElements = document.querySelectorAll('.work-card, .about, .works-header');
 
@@ -131,3 +133,5 @@ document.addEventListener('keydown', (e) => {
     document.body.style.overflow = 'auto';
   }
 });
+
+document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
